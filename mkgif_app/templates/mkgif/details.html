@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Make GIF</title>
+    </head>
+    <body>
+        <h1>{{ anim.name }}</h1>
+        <hr>
+
+        <div>
+            <p>Generated gif image: </p>
+            <p>{{ anim.enqueue }}</p>
+            <img src="/media/{{ anim.id }}/out.gif" />
+        </div>
+        <hr>
+
+        {% for image in images %}
+        <div><img src="{{ image.media_url }}" /></div>
+        {% endfor %}
+    </body>
+</html>
